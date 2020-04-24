@@ -6,12 +6,13 @@ function greetCustomer() {
 
 greetCustomer();
 
+
 function getPizzaOrder(size, crust, ...toppings) {
     const listToppings = () => {
         let theseToppings = `${toppings[0..toppings.length - 2]} and ${toppings[toppings.length - 1]}.`;
         return theseToppings;
     }
-    /*if (toppings = "") {
+    /*if (!toppings) {
         console.log(`One ${size} ${crust} crust cheese pizza coming up!`);
     }
     if (!pizzaToppings.includes(toppings)) {
@@ -25,17 +26,18 @@ function getPizzaOrder(size, crust, ...toppings) {
     return order;
 }
 
-getPizzaOrder("large", "hand tossed", "");
+getPizzaOrder("large", "hand tossed");
 getPizzaOrder("medium", "deep dish", "ham", "bacon", "pineapple");
 getPizzaOrder("small", "thin", "anchovies");
 //console.log(order);
 
-function preparePizza(order) {
+function preparePizza() {
+    let order = ["medium", "thin", "pepperoni"];
     console.log(`Cooking ${order} pizza!`);
     const pizza = {
-        size : order[0],
-        crust : order[1],
-        toppings : order[2]
+        size: order[0],
+        crust: order[1],
+        toppings: order[2]
     }
     return pizza;
 }
