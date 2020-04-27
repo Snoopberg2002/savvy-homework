@@ -12,13 +12,13 @@ function getPizzaOrder(size, crust, ...toppings) {
         let theseToppings = `${toppings[0..toppings.length - 2]} and ${toppings[toppings.length - 1]}.`;
         return theseToppings;
     }
-    if (!toppings) {
-        console.log(`One ${size} ${crust} crust cheese pizza coming up!`);
+    /*if (!toppings) {
+        return console.log(`One ${size} ${crust} crust cheese pizza coming up!`;
     } else if (!pizzaToppings.includes(toppings)) {
-        console.log(`I'm sorry, we don't have ${toppings}.`)
+        return console.log(`I'm sorry, we don't have ${toppings}.`)
     } else {
         console.log( `One ${size} ${crust} crust pizza with ${theseToppings} coming up!`);
-    }
+    }*/
     console.log(`One ${size} ${crust} crust pizza with ${toppings} coming up!`)
     let order = [size, crust, toppings];
     console.log(order);
