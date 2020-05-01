@@ -1,21 +1,12 @@
-let pizzaToppings = ["pepperoni", "ham", "bacon", "chicken", "green peppers", "onion", "mushroom", "tomato", "pineapple"];
-
-function greetCustomer() {
-    console.log(`Welcome to The Pizza Planet, our toppings include ${pizzaToppings}.`);
-}
-
-greetCustomer();
-
-
 function getPizzaOrder(size, crust, ...toppings) {
+    let order = [size, crust, toppings];
     const listToppings = () => {
-        let order = [size, crust, toppings];
-        let theseToppings = `${toppings[0..toppings.length - 2]} and ${toppings[toppings.length - 1]}.`;
-        console.log(`One ${size} ${crust} crust pizza with ${theseToppings} coming up!`);
+        /*let theseToppings = `${toppings[0..toppings.length - 2]} and ${toppings[toppings.length - 1]}.`;*/
+        console.log(`One ${size} ${crust} crust pizza with ${toppings} coming up!`);
         console.log(listToppings);
         return order;
     }
-    listToppings();
+    
     /*if (!toppings) {
         return console.log(`One ${size} ${crust} crust cheese pizza coming up!`;
     } else if (!pizzaToppings.includes(toppings)) {
@@ -23,6 +14,7 @@ function getPizzaOrder(size, crust, ...toppings) {
     } else {
         console.log( `One ${size} ${crust} crust pizza with ${theseToppings} coming up!`);
     }*/
+    listToppings();
 }
 
 getPizzaOrder("large", "hand tossed");
